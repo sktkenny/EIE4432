@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        Reset Password
+    </title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/367681107c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div>
+                <div class="login">
+                    <button class="login" onclick="window.location.href='login.html'">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </button>
+                </div>
+                <div class="createac">
+                    <button class="createac" onclick="window.location.href='createac.html'">
+                        <i class="fas fa-user-plus"></i>
+                            Create an account
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="login-title">
+                <div class="title-text">
+                    Reset Your Password
+                </div>
+                <form action="resetpw.php" method="post">
+                    <table class="tablecontainer">
+                        <tr>
+                            <td>
+                                <label for="loginid" class="textinform">Login ID:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="loginid" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email" class="textinform">Email:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="email" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="loginpw" class="textinform">Password:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="loginpw" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="confirmpw" class="textinform">Confirm Your Password:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="confirmpw" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" name="submit" class="loginbtnbk">Reset Password</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        @2021 Author: Kenny.  All Right Reserved.
+    </footer>
+</body>

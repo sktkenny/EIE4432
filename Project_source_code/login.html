@@ -1,0 +1,90 @@
+<!--
+    Author: Shea Kam Tsung
+    Student ID: 20017823D
+    Purpose: Project
+-->
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        Kenny's Online Shop
+    </title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/367681107c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div>
+                <div class="createac">
+                    <button class="createac" onclick="window.location.href='createac.html'">
+                        <i class="fas fa-user-plus"></i>
+                            Create new account
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="login-title">
+                <div class="title-text">
+                    Welcome To My Shop<br>
+                </div>
+                <form action="login.php" method="post">
+                    <table class="tablecontainer">
+                        <tr>
+                            <td>
+                                <label for="loginid" class="textinform">Login ID</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="loginid" placeholder="Enter Your ID..." required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="loginpw" class="textinform">Login Password</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" name="loginpw" id="loginpw" placeholder="Enter Your Password..." required>
+                                <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" name="submit" class="loginbtnbk">Login</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="loginbtnbk" onclick="document.location ='resetpw.html'">Forgot password?</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <p class="createactext">
+                    If you do not have an account before<br>
+                    Please click the "Create an acoount" on the top right corner to create one.<br>
+                    There is the new product waiting for you!
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        @2021 Author: Kenny.  All Right Reserved.
+    </footer>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#loginpw');
+ 
+        togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
